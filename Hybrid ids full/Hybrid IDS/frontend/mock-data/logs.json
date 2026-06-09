@@ -1,0 +1,162 @@
+[
+  {
+    "type": "SQL Injection",
+    "ip": "192.168.1.54",
+    "method": "Signature",
+    "timestamp": "2026-04-15T14:29:48Z",
+    "port": 3306,
+    "protocol": "TCP"
+  },
+  {
+    "type": "DDoS",
+    "ip": "10.0.0.112",
+    "method": "Anomaly",
+    "timestamp": "2026-04-15T14:28:31Z",
+    "port": 80,
+    "protocol": "UDP"
+  },
+  {
+    "type": "Port Scan",
+    "ip": "192.168.2.17",
+    "method": "Signature",
+    "timestamp": "2026-04-15T14:27:15Z",
+    "port": 22,
+    "protocol": "TCP"
+  },
+  {
+    "type": "Brute Force",
+    "ip": "10.0.1.88",
+    "method": "Anomaly",
+    "timestamp": "2026-04-15T14:26:02Z",
+    "port": 22,
+    "protocol": "TCP"
+  },
+  {
+    "type": "XSS Attack",
+    "ip": "172.16.4.33",
+    "method": "Signature",
+    "timestamp": "2026-04-15T14:25:44Z",
+    "port": 443,
+    "protocol": "TCP"
+  },
+  {
+    "type": "Command Injection",
+    "ip": "192.168.3.201",
+    "method": "Signature",
+    "timestamp": "2026-04-15T14:24:19Z",
+    "port": 8080,
+    "protocol": "TCP"
+  },
+  {
+    "type": "Traffic Spike",
+    "ip": "10.0.2.45",
+    "method": "Anomaly",
+    "timestamp": "2026-04-15T14:23:57Z",
+    "port": 53,
+    "protocol": "UDP"
+  },
+  {
+    "type": "LDAP Injection",
+    "ip": "192.168.5.9",
+    "method": "Signature",
+    "timestamp": "2026-04-15T14:22:33Z",
+    "port": 389,
+    "protocol": "TCP"
+  },
+  {
+    "type": "Unusual Outbound Transfer",
+    "ip": "172.16.0.77",
+    "method": "Anomaly",
+    "timestamp": "2026-04-15T14:21:11Z",
+    "port": 443,
+    "protocol": "TCP"
+  },
+  {
+    "type": "FTP Brute Force",
+    "ip": "192.168.1.120",
+    "method": "Signature",
+    "timestamp": "2026-04-15T14:20:05Z",
+    "port": 21,
+    "protocol": "TCP"
+  },
+  {
+    "type": "DNS Amplification",
+    "ip": "10.0.3.14",
+    "method": "Anomaly",
+    "timestamp": "2026-04-15T14:18:48Z",
+    "port": 53,
+    "protocol": "UDP"
+  },
+  {
+    "type": "SMB Exploit",
+    "ip": "192.168.0.231",
+    "method": "Signature",
+    "timestamp": "2026-04-15T14:17:29Z",
+    "port": 445,
+    "protocol": "TCP"
+  },
+  {
+    "type": "Shellshock",
+    "ip": "10.10.1.67",
+    "method": "Signature",
+    "timestamp": "2026-04-15T14:16:03Z",
+    "port": 80,
+    "protocol": "TCP"
+  },
+  {
+    "type": "Beaconing Activity",
+    "ip": "172.16.8.19",
+    "method": "Anomaly",
+    "timestamp": "2026-04-15T14:15:41Z",
+    "port": 4444,
+    "protocol": "TCP"
+  },
+  {
+    "type": "CSRF Attack",
+    "ip": "192.168.4.88",
+    "method": "Signature",
+    "timestamp": "2026-04-15T14:14:27Z",
+    "port": 443,
+    "protocol": "TCP"
+  },
+  {
+    "type": "Lateral Movement",
+    "ip": "10.0.5.200",
+    "method": "Anomaly",
+    "timestamp": "2026-04-15T14:13:10Z",
+    "port": 135,
+    "protocol": "TCP"
+  },
+  {
+    "type": "Directory Traversal",
+    "ip": "192.168.7.44",
+    "method": "Signature",
+    "timestamp": "2026-04-15T14:12:55Z",
+    "port": 8443,
+    "protocol": "TCP"
+  },
+  {
+    "type": "High Entropy Data Transfer",
+    "ip": "172.16.2.100",
+    "method": "Anomaly",
+    "timestamp": "2026-04-15T14:11:38Z",
+    "port": 443,
+    "protocol": "TCP"
+  },
+  {
+    "type": "Telnet Brute Force",
+    "ip": "10.0.0.77",
+    "method": "Signature",
+    "timestamp": "2026-04-15T14:10:14Z",
+    "port": 23,
+    "protocol": "TCP"
+  },
+  {
+    "type": "Slow HTTP Attack",
+    "ip": "192.168.6.55",
+    "method": "Anomaly",
+    "timestamp": "2026-04-15T14:09:02Z",
+    "port": 80,
+    "protocol": "TCP"
+  }
+]

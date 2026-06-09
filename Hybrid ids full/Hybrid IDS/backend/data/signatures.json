@@ -1,0 +1,257 @@
+[
+  {
+    "id": "SIG-001",
+    "name": "SQL Injection",
+    "description": "Probe on MySQL port",
+    "conditions": {
+      "port": [
+        3306
+      ],
+      "protocol": [
+        "TCP"
+      ]
+    },
+    "severity": "critical"
+  },
+  {
+    "id": "SIG-002",
+    "name": "SSH Brute Force",
+    "description": "Repeated connection attempts on SSH",
+    "conditions": {
+      "port": [
+        22
+      ],
+      "protocol": [
+        "TCP"
+      ],
+      "flags": [
+        "SYN"
+      ]
+    },
+    "severity": "high"
+  },
+  {
+    "id": "SIG-003",
+    "name": "FTP Brute Force",
+    "description": "Brute force on FTP service",
+    "conditions": {
+      "port": [
+        21
+      ],
+      "protocol": [
+        "TCP"
+      ]
+    },
+    "severity": "high"
+  },
+  {
+    "id": "SIG-004",
+    "name": "SMB Exploit",
+    "description": "SMB/Windows file-share exploitation",
+    "conditions": {
+      "port": [
+        445,
+        139
+      ],
+      "protocol": [
+        "TCP"
+      ]
+    },
+    "severity": "critical"
+  },
+  {
+    "id": "SIG-005",
+    "name": "DNS Amplification",
+    "description": "Oversized DNS replies \u2013 potential amplification",
+    "conditions": {
+      "port": [
+        53
+      ],
+      "protocol": [
+        "UDP"
+      ]
+    },
+    "severity": "high"
+  },
+  {
+    "id": "SIG-006",
+    "name": "LDAP Injection",
+    "description": "LDAP directory attack",
+    "conditions": {
+      "port": [
+        389,
+        636
+      ],
+      "protocol": [
+        "TCP"
+      ]
+    },
+    "severity": "high"
+  },
+  {
+    "id": "SIG-007",
+    "name": "Telnet Brute Force",
+    "description": "Attack on legacy Telnet service",
+    "conditions": {
+      "port": [
+        23
+      ],
+      "protocol": [
+        "TCP"
+      ]
+    },
+    "severity": "medium"
+  },
+  {
+    "id": "SIG-008",
+    "name": "RDP Attack",
+    "description": "Remote Desktop Protocol attack",
+    "conditions": {
+      "port": [
+        3389
+      ],
+      "protocol": [
+        "TCP"
+      ]
+    },
+    "severity": "critical"
+  },
+  {
+    "id": "SIG-009",
+    "name": "HTTP Attack",
+    "description": "Attack on plain HTTP service",
+    "conditions": {
+      "port": [
+        80,
+        8080
+      ],
+      "protocol": [
+        "TCP"
+      ],
+      "flags": [
+        "RST",
+        "SYN"
+      ]
+    },
+    "severity": "medium"
+  },
+  {
+    "id": "SIG-010",
+    "name": "HTTPS / TLS Attack",
+    "description": "Attack over HTTPS channel",
+    "conditions": {
+      "port": [
+        443,
+        8443
+      ],
+      "protocol": [
+        "TCP"
+      ],
+      "flags": [
+        "RST",
+        "SYN"
+      ]
+    },
+    "severity": "medium"
+  },
+  {
+    "id": "SIG-011",
+    "name": "XSS Attack",
+    "description": "Cross-site scripting via web port",
+    "conditions": {
+      "port": [
+        443,
+        80
+      ],
+      "protocol": [
+        "TCP"
+      ],
+      "flags": [
+        "PSH",
+        "ACK"
+      ]
+    },
+    "severity": "high"
+  },
+  {
+    "id": "SIG-012",
+    "name": "Port Scan",
+    "description": "Sequential SYN to multiple ports",
+    "conditions": {
+      "port": [
+        22,
+        80,
+        443,
+        8080,
+        3306
+      ],
+      "protocol": [
+        "TCP"
+      ],
+      "flags": [
+        "SYN"
+      ]
+    },
+    "severity": "medium"
+  },
+  {
+    "id": "SIG-013",
+    "name": "Command Injection",
+    "description": "Shell command injection probe",
+    "conditions": {
+      "port": [
+        8080,
+        8443
+      ],
+      "protocol": [
+        "TCP"
+      ]
+    },
+    "severity": "critical"
+  },
+  {
+    "id": "SIG-014",
+    "name": "Shellshock",
+    "description": "Bash CVE-2014-6271 exploit attempt",
+    "conditions": {
+      "port": [
+        80,
+        8080
+      ],
+      "protocol": [
+        "TCP"
+      ]
+    },
+    "severity": "critical"
+  },
+  {
+    "id": "SIG-015",
+    "name": "Directory Traversal",
+    "description": "Path traversal attempt on web server",
+    "conditions": {
+      "port": [
+        80,
+        443,
+        8443
+      ],
+      "protocol": [
+        "TCP"
+      ]
+    },
+    "severity": "high"
+  },
+  {
+    "id": "SIG-016",
+    "name": "CSRF Attack",
+    "description": "Cross-site request forgery",
+    "conditions": {
+      "port": [
+        443
+      ],
+      "protocol": [
+        "TCP"
+      ]
+    },
+    "severity": "medium"
+  }
+]

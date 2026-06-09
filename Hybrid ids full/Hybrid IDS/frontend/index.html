@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hybrid IDS Dashboard - Simple</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.2/dist/chart.umd.min.js"></script>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar">
+      <h2>Hybrid IDS</h2>
+      <button class="nav active" data-view="dashboard">Dashboard</button>
+      <button class="nav" data-view="alerts">Alerts</button>
+      <button class="nav" data-view="logs">Logs</button>
+      <button class="nav" data-view="test">Test Packet</button>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <h1>Hybrid Intrusion Detection System</h1>
+        <span id="clock"></span>
+      </header>
+
+      <section id="dashboard" class="view active">
+        <div class="cards">
+          <div class="card"><p>Total Traffic</p><h2 id="totalTraffic">-</h2></div>
+          <div class="card"><p>Total Alerts</p><h2 id="totalAlerts">-</h2></div>
+          <div class="card"><p>Signature</p><h2 id="signatureDetections">-</h2></div>
+          <div class="card"><p>Anomaly</p><h2 id="anomalyDetections">-</h2></div>
+        </div>
+
+        <div class="actions">
+          <button id="startSimulation">Start Simulation</button>
+          <button id="stopSimulation">Stop Simulation</button>
+          <button id="trainModel">Train Model</button>
+          <button id="refreshNow">Refresh</button>
+        </div>
+
+        <div class="panel">
+          <h3>Traffic Chart</h3>
+          <canvas id="trafficChart"></canvas>
+        </div>
+      </section>
+
+      <section id="alerts" class="view">
+        <div class="panel">
+          <h3>Recent Alerts</h3>
+          <div id="alertsList"></div>
+        </div>
+      </section>
+
+      <section id="logs" class="view">
+        <div class="panel">
+          <h3>Detection Logs</h3>
+          <table>
+            <thead>
+              <tr>
+                <th>Time</th><th>IP</th><th>Port</th><th>Protocol</th><th>Type</th><th>Method</th>
+              </tr>
+            </thead>
+            <tbody id="logsBody"></tbody>
+          </table>
+        </div>
+      </section>
+
+      <section id="test" class="view">
+        <div class="panel">
+          <h3>Manual Packet Test</h3>
+          <form id="packetForm" class="form">
+            <input id="ip" placeholder="IP address" value="10.0.0.42" />
+            <input id="port" type="number" placeholder="Port" value="22" />
+            <select id="protocol">
+              <option>TCP</option>
+              <option>UDP</option>
+              <option>ICMP</option>
+            </select>
+            <input id="packetSize" type="number" placeholder="Packet size" value="64" />
+            <input id="flags" placeholder="Flags" value="SYN" />
+            <button type="submit">Analyze Packet</button>
+          </form>
+          <pre id="packetResult">Result will appear here...</pre>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>
